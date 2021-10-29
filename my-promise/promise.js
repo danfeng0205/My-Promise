@@ -150,8 +150,6 @@ Promise.all = function (promises) {
 Promise.race = function (promises) {
     // 返回结果为Promise对象
     return new Promise((resolve, reject) => {
-        // 存放成功结果
-        let arr = [];
         // 遍历
         for (let i = 0; i < promises.length; i++) {
             promises[i].then(v => {
